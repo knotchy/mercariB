@@ -59,7 +59,7 @@
             margin: 0 auto;
             margin-top: 8px;
             .transaction-price-cell {
-              width: 198px;
+              width: 140px;
               float: left;
               text-align: left;
               font-size: 28px;
@@ -67,11 +67,12 @@
               font-weight: 600;
             }
             .transaction-price-cell-price {
-              width: 120px;
+              width: 180px;
               float: left;
               font-size: 28px;
               margin: 16px 0;
               font-weight: 600;
+              text-align: right;
             }
           }
         }
@@ -82,6 +83,9 @@
         }
         .signup-panel__inner-buy{
           margin-top: 16px;
+          .payjp_form {
+            padding: 10px 120px;
+          }
         }
         .transaction_app_info {
           text-align: center;

@@ -37,8 +37,9 @@
 
             .signup-panel__inner-buy
               / =link_to '購入する',purchase_complete_path(@product), class: 'btn.btn__mail', method: :post
-              = form_tag(action: :completed_transaction, method: :post, id: @product.id) do
-                %script{class: "payjp-button", type: "text/javascript", src: "https://checkout.pay.jp", "data-text": "購入する", "data-key": "#{PAYJP_PUBLIC_KEY}"}
+              .payjp_form
+                = form_tag(action: :completed_transaction, method: :post, id: @product.id) do
+                  %script{class: "payjp-button", type: "text/javascript", src: "https://checkout.pay.jp", "data-text": "購入する", "data-key": "#{PAYJP_PUBLIC_KEY}"}
 
               %p.transaction_app_info
                 アプリをお持ちでない方は以下よりインストールしてご利用いただけます。

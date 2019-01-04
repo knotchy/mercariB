@@ -52,12 +52,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:format])
   end
 
-  private
-  def product_new
-    @product = Product.new
-  end
-
-
   def completed_transaction
     ActiveRecord::Base.transaction do
 
@@ -74,6 +68,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  private
+  def product_new
+    @product = Product.new
+  end
 
   def product_params
     params.require(:product).permit(
